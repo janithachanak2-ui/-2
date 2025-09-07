@@ -22,7 +22,7 @@ cmd(
     }
   ) => {
     try {
-      if (!q) return reply("*HUTTO NIKAN GAHANNA EPA OKA* 🔍");
+      if (!q) return reply("*LINK EKA KO BALLO* 🔍");
 
       reply("*IDAPAN HOYANA GAMAN...* ⌛");
 
