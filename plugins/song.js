@@ -11,7 +11,7 @@ cmd(
     filename: __filename,
   },
   async (
-    danuwa,
+    janiya,
     mek,
     m,
     {
@@ -55,7 +55,7 @@ Song downloader
 🔗 *Watch Here:* ${data.url}
 `;
 
-      await danuwa.sendMessage(
+      await janiya.sendMessage(
         from,
         { image: { url: data.thumbnail }, caption: desc },
         { quoted: mek }
@@ -71,10 +71,10 @@ Song downloader
           : durationParts[0] * 60 + durationParts[1];
 
       if (totalSeconds > 1800) {
-        return reply("⏳ *Sorry, audio files longer than 30 minutes are not supported.*");
+        return reply("⏳ *UBE SINDUWA LOKU WADI PAKO.*");
       }
 
-      await danuwa.sendMessage(
+      await janiya.sendMessage(
         from,
         {
           audio: { url: songData.download.url },
@@ -89,12 +89,12 @@ Song downloader
           document: { url: songData.download.url },
           mimetype: "audio/mpeg",
           fileName: `${data.title}.mp3`,
-          caption: "🎶 *Your song is ready to be played!*",
+          caption: "🎶 *ONNA UBA ILLAPU EKA!*",
         },
         { quoted: mek }
       );
 
-      return reply("✅ Thank you");
+      return reply("✅ AYE WADA DENNA EPA");
     } catch (e) {
       console.log(e);
       reply(`❌ *Error:* ${e.message} 😞`);
