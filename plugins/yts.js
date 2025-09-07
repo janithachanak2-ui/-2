@@ -11,7 +11,7 @@ cmd(
     filename: __filename,
   },
   async (
-    danuwa,
+    janiya,
     mek,
     m,
     {
@@ -22,33 +22,33 @@ cmd(
     }
   ) => {
     try {
-      if (!q) return reply("*Please provide a search query!* 🔍");
+      if (!q) return reply("*HUTTO NIKAN GAHANNA EPA OKA* 🔍");
 
-      reply("*Searching YouTube for you...* ⌛");
+      reply("*IDAPAN HOYANA GAMAN...* ⌛");
 
       const search = await yts(q);
 
       if (!search || !search.all || search.all.length === 0) {
-        return reply("*No results found on YouTube.* ☹️");
+        return reply("*UBATA HOYALA DENNE NA PALAYAN.* ☹️");
       }
 
-      const results = search.videos.slice(0, 10); 
+      const results = search.videos.slice(0, 5); 
       let formattedResults = results.map((v, i) => (
         `🎬 *${i + 1}. ${v.title}*\n📅 ${v.ago} | ⌛ ${v.timestamp} | 👁️ ${v.views.toLocaleString()} views\n🔗 ${v.url}`
       )).join("\n\n");
 
       const caption = `  
-Your youtube search results
+*ONNA UBA HOYAPU EKA*
 ─────────────────────────
 🔎 *Query*: ${q}
 ${formattedResults}
    `;
 
-      await danuwa.sendMessage(
+      await janiya.sendMessage(
         from,
         {
           image: {
-            url: "https://github.com/DANUWA-MD/DANUWA-MD/blob/main/images/yts.png?raw=true",
+            url: "https://files.catbox.moe/v5tz96.jpeg",
           },
           caption,
         },
@@ -56,7 +56,7 @@ ${formattedResults}
       );
     } catch (err) {
       console.error(err);
-      reply("*An error occurred while searching YouTube.* ❌");
+      reply("*UBATA KELLEK NA NE EKA NISA MEKA WADA NA.* ❌");
     }
   }
 );
