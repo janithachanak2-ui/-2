@@ -40,7 +40,7 @@ cmd(
     }
   ) => {
     try {
-      if (!q) return reply("❌ *Please provide a song name or YouTube link*");
+      if (!q) return reply("❌ *LINK EKA KO BALLO*");
 
       const search = await yts(q);
       const data = search.videos[0];
