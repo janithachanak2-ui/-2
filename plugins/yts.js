@@ -38,7 +38,7 @@ cmd(
       )).join("\n\n");
 
       const caption = `  
-*ONNA UBA HOYAPU EKA*
+*YT GET*
 ─────────────────────────
 🔎 *Query*: ${q}
 ${formattedResults}
